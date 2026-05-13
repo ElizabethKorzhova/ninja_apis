@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "ninja",
     "task_manager",
+    "ecommerce",
 ]
 
 MIDDLEWARE = [
