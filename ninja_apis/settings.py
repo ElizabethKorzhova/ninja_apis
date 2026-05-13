@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "ecommerce",
     "movie_collection",
     "blog",
+    "server_monitoring"
 ]
 
 MIDDLEWARE = [
