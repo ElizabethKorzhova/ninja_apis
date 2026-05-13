@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "task_manager",
     "ecommerce",
     "movie_collection",
+    "blog",
 ]
 
 MIDDLEWARE = [
