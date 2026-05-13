@@ -6,6 +6,7 @@ from ninja.security import django_auth
 
 from task_manager.api import router as task_router
 from ecommerce.api import router as ecommerce_router
+from movie_collection.api import router as movie_collection_router
 
 api = NinjaAPI(
     title="Django Ninja API",
@@ -23,3 +24,4 @@ def get_csrf_token(request: HttpRequest) -> JsonResponse:
 
 api.add_router("/tasks/", task_router)
 api.add_router("/ecommerce/", ecommerce_router)
+api.add_router("/movies/", movie_collection_router)

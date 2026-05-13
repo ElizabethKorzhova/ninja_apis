@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "ninja",
     "task_manager",
     "ecommerce",
+    "movie_collection",
 ]
 
 MIDDLEWARE = [
