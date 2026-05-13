@@ -1,0 +1,23 @@
+"""This module contains main API configuration."""
+from django.http import JsonResponse, HttpRequest
+from django.views.decorators.csrf import ensure_csrf_cookie, csrf_exempt
+from ninja import NinjaAPI
+from ninja.security import django_auth
+
+from task_manager.api import router as task_router
+
+api = NinjaAPI(
+    title="Django Ninja API",
+    version="1.0.0",
+    auth=django_auth,
+)
+
+@api.get("/csrf/", auth=None)
+@ensure_csrf_cookie
+@csrf_exempt
+def get_csrf_token(request: HttpRequest) -> JsonResponse:
+    """Sets CSRF cookie for Swagger."""
+    return JsonResponse({"detail": "CSRF cookie set"})
+
+
+api.add_router("/tasks/", task_router)
