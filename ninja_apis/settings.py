@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "blog",
     "server_monitoring",
     "book_library",
+    "management",
 ]
 
 MIDDLEWARE = [

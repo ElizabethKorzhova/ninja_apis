@@ -10,6 +10,7 @@ from movie_collection.api import router as movie_collection_router
 from blog.api import router as blog_router
 from server_monitoring.api import router as server_router
 from book_library.api import router as book_router
+from management.api import router as management_router
 
 api = NinjaAPI(
     title="Django Ninja API",
@@ -31,3 +32,4 @@ api.add_router("/movies/", movie_collection_router)
 api.add_router("/blogs/", blog_router)
 api.add_router("/server_monitoring/", server_router)
 api.add_router("/books/", book_router)
+api.add_router("/management/", management_router)
